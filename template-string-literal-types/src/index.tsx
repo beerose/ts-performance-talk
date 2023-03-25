@@ -1,3 +1,5 @@
+// ref: https://github.com/microsoft/TypeScript/issues/52867
+
 const Database = () => ({
   query: (_query: string) => {
     return {

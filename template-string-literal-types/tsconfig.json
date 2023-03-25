@@ -5,6 +5,6 @@
     "lib": ["esnext", "dom"],
     "noEmitOnError": false,
     "noEmit": true,
-    "outDir": "dist",
+    "outDir": "dist"  
   }
 }
