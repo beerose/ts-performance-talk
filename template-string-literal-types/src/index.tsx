@@ -1,7 +1,7 @@
 const Database = () => ({
-  query: (query: string) => {
+  query: (_query: string) => {
     return {
-      get: (params: any) => {
+      get: (_params: any) => {
         return {
           last_processed: "2019-01-01",
           last_known_update: "2019-01-01",
@@ -11,7 +11,6 @@ const Database = () => ({
   };
 });
 
-type oneToFour = 1 | 2 | 3 | 4;
 type oneToNine = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 type zeroToNine = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 export type YYYY =
@@ -20,18 +19,15 @@ export type YYYY =
 type MM = `0${oneToNine}` | `1${0 | 1 | 2}`;
 type DD = `${0}${oneToNine}` | `${1 | 2}${zeroToNine}` | `3${0 | 1}`;
 export type FullDateString = `${YYYY}-${MM}-${DD}`;
-export type OptionalFullDateString = FullDateString | "";
-export type SecBoolean = 0 | 1;
-export type Frame = `CY${YYYY}Q${oneToFour}I`;
 
 export const ensureSubmissionsAreUptodate = async (cik: number) => {
   const db = Database();
-  const SelectSubmissionsProcessedDate = db.query(
+  const processedDatesQuery = db.query(
     `SELECT last_processed, last_known_update FROM edgar_submissions WHERE cik=$cik`
   );
   let last_processed: FullDateString | null = null;
   let last_known_update: FullDateString | null = null;
-  const result = SelectSubmissionsProcessedDate.get({ $cik: cik });
+  const result = processedDatesQuery.get({ $cik: cik });
 
   if (result) {
     last_processed = result.last_processed as FullDateString; // this is the problem
