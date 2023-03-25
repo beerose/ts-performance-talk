@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": ["esnext", "dom"],
+    "noEmitOnError": false,
+    "noEmit": true,
+    "outDir": "dist"  
+  }
+}
