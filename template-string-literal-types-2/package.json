@@ -1,0 +1,19 @@
+{
+  "name": "template-string-literal-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fp-ts": "^2.13.1",
+    "mobx": "^6.9.0",
+    "mobx-state-tree": "^5.1.8",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4"
+  }
+}
