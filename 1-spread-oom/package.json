@@ -1,0 +1,13 @@
+{
+  "name": "1-spread-oom",
+  "license": "ISC",
+  "version": "1.0.0",
+  "scripts": {
+    "bad": "time tsc --noEmit",
+    "good": "time node_modules/typescript-5/bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "typescript": "3.6.4",
+    "typescript-5": "npm:typescript@5"
+  }
+}

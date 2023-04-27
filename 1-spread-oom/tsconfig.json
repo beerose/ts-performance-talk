@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext"
+  },
+  "include": ["src/**/*.ts"]
+}
