@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite"
+    "bad:dev": "cd bad && vite",
+    "bad": "tsc -P ./bad/tsconfig.json --extendedDiagnostics",
+    "good:dev": "cd good && vite",
+    "good": "tsc -P ./good/tsconfig.json --extendedDiagnostics"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +21,9 @@
     "styled-components": "^5.3.6",
     "typescript": "^4.9.5",
     "vite": "^4.1.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite-plugin-babel-macros": "^1.0.6"
   }
 }

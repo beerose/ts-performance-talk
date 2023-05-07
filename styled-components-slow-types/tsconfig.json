@@ -4,6 +4,6 @@
     "jsx": "react-jsx",
     "lib": ["esnext", "dom"],
     "noEmitOnError": false,
-    "outDir": "dist",
+    "outDir": "dist"
   }
 }
