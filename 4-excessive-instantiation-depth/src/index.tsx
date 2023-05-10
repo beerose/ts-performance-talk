@@ -21,5 +21,5 @@ const _ = new Col()
   .withRequiredPrimitiveParam("value")
   .withRequiredPrimitiveParam("value")
   .withRequiredPrimitiveParam("value")
-  .withRequiredPrimitiveParam("value");
-// .withRequiredPrimitiveParam("value"); // Hits stack limit
+  .withRequiredPrimitiveParam("value")
+  .withRequiredPrimitiveParam("value"); // Hits stack limit
