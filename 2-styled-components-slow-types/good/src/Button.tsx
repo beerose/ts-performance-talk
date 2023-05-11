@@ -1,6 +1,5 @@
 import * as React from "react";
-import { memo } from "react";
-import styled, { CSSProp, css } from "styled-components/macro";
+import { CSSProp, css } from "styled-components/macro";
 
 import { Box, BoxOwnProps } from "./Box";
 

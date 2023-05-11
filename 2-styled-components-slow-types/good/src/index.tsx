@@ -1,8 +1,7 @@
 import { createRoot } from "react-dom/client";
-import { ComponentPropsWithoutRef, StrictMode, MouseEvent } from "react";
+import { StrictMode, MouseEvent } from "react";
 
 import { Button, ButtonProps } from "./Button";
-import { css } from "styled-components/macro";
 
 function BigButton(props: ButtonProps) {
   return (
